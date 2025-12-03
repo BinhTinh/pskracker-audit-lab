@@ -11,7 +11,7 @@ set -e
 
 # Import utilities
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/. ." && pwd)"
+PROJECT_ROOT="/home/phuong/pskracker-audit-lab"   # ✅ SET CỨNG
 source "$PROJECT_ROOT/utils/logger.sh"
 source "$PROJECT_ROOT/utils/validators.sh"
 
