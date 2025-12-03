@@ -99,18 +99,32 @@ else
 fi
 
 log_info "  → Cài đặt Python libraries..."
-pip3 install --upgrade pip 2>/dev/null || true
 
-PYTHON_LIBS=(
-    "scapy"      # Packet manipulation
-    "pandas"     # Data analysis (for CSV parsing)
-    "colorama"   # Colored terminal output
+# Ubuntu 24.04 dùng externally-managed environment
+# Nên dùng apt thay vì pip để cài system-wide packages
+
+PYTHON_PACKAGES=(
+    "python3-scapy"      # Packet manipulation
+    "python3-pandas"     # Data analysis (for CSV parsing)  
+    "python3-colorama"   # Colored terminal output
 )
 
-for lib in "${PYTHON_LIBS[@]}"; do
-    log_info "    → pip install $lib"
-    pip3 install "$lib" --quiet 2>/dev/null || pip3 install "$lib"
+for pkg in "${PYTHON_PACKAGES[@]}"; do
+    if dpkg -l | grep -q "^ii  ${pkg}"; then
+        log_info "    ✓ $pkg đã được cài đặt"
+    else
+        log_info "    → Đang cài đặt $pkg..."
+        apt install -y "$pkg"
+    fi
 done
+
+# Backup: Nếu cần pip packages không có trong apt
+# Dùng --break-system-packages với warning
+log_info "  → Kiểm tra pip packages bổ sung..."
+pip3 list 2>/dev/null | grep -q scapy || {
+    log_warn "    Scapy chưa có, cài qua pip với --break-system-packages"
+    pip3 install scapy --break-system-packages --quiet 2>/dev/null || true
+}
 
 log_success "Python environment đã sẵn sàng"
 
