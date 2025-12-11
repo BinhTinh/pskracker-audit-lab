@@ -1,0 +1,16 @@
+# Captures (sensitive data)
+data/captures/
+*.cap
+*.pcap
+*.csv
+
+# Logs
+logs/
+*.log
+
+# Runtime config (chứa password)
+config/lab.conf
+
+# Compiled binaries
+tools/pskracker/pskracker
+tools/pskracker/*.o

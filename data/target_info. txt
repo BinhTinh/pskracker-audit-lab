@@ -1,0 +1,14 @@
+# PSKracker Audit Lab - Target Information
+# Generated: Wed Dec 10 10:04:37 AM +07 2025
+
+BSSID:       08:86:3B:14:7A:87
+SSID:        Belkin. 7A87
+Channel:     6
+Security:    WPA2-PSK
+Password:    ce487c82
+
+Wordlist:    /home/phuong/pskracker-audit-lab/data/wordlists/pskracker_08863B147A87.txt
+Word Count:  17
+
+OUI:         08:86:3B (Belkin)
+CVE:         CVE-2012-4366

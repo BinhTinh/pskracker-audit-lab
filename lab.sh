@@ -66,7 +66,7 @@ show_help() {
     echo "Examples:"
     echo "  sudo ./lab.sh status"
     echo "  sudo ./lab.sh phase0"
-    echo "  sudo ./lab. sh full"
+    echo "  sudo ./lab.sh full"
     echo ""
 }
 
@@ -165,7 +165,7 @@ run_phase() {
     log_info "Phase directory: $phase_path"
     
     # Find and run main script
-    local main_script="$phase_path/run. sh"
+    local main_script="$phase_path/run.sh"
     
     if [[ -f "$main_script" ]]; then
         bash "$main_script"

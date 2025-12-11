@@ -1,0 +1,109 @@
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                    PSKracker AUDIT LAB - FINAL REPORT                         ║
+║                                                                               ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║  Date:        Wed Dec 10 03:24:47 PM +07 2025                              ║
+║  Lab Version: 1.0                                                             ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  1. TARGET CONFIGURATION                                                      │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    BSSID:          08:86:3B:14:7A:87
+│    SSID:           Belkin. 7A87
+│    Channel:        6
+│    Security:       WPA2-PSK (CCMP)
+│    OUI:            08:86:3B (Belkin International Inc.)
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  2. HARDWARE USED                                                             │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    AP Interface:      wlx90de80390f17
+│    Monitor Interface: wlo1
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  3. ATTACK RESULTS                                                            │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    Original Password:   ce487c82
+│    Cracked Password:    ce487c82
+│    Capture File:        /home/phuong/pskracker-audit-lab/data/captures/handshake_20251210_150833-01.cap
+│    PSKracker Binary:    /usr/local/bin/pskracker
+│                                                                               │
+│    ✅ PASSWORD SUCCESSFULLY CRACKED!
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  4. VULNERABILITY DEMONSTRATED                                                │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    CVE:          CVE-2012-4366                                                 │
+│    Vendor:      Belkin International Inc.                                      │
+│    Impact:      Default WPA2 passwords are predictable                        │
+│                                                                               │
+│    Description:                                                                │
+│    Belkin routers generate default WiFi passwords using a weak               │
+│    algorithm based on the device's MAC address. This allows an               │
+│    attacker to predict possible passwords and crack WPA2 handshakes.         │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  5. ATTACK FLOW                                                               │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    Phase 0:  Preparation                                                       │
+│      └─→ Install dependencies, build PSKracker, generate target              │
+│                                                                               │
+│    Phase 1: Hardware Verification                                             │
+│      └─→ Detect interfaces, assign AP and Monitor roles                      │
+│                                                                               │
+│    Phase 2: Target AP Setup                                                   │
+│      └─→ Spoof MAC, start hostapd + dnsmasq, broadcast Fake AP               │
+│                                                                               │
+│    Phase 3: Capture Handshake                                                 │
+│      └─→ Enable monitor mode, capture 4-way handshake                        │
+│                                                                               │
+│    Phase 4: Crack Password                                                    │
+│      └─→ Use aircrack-ng with PSKracker wordlist                             │
+│                                                                               │
+│    Phase 5: Report (this report)                                              │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  6. RECOMMENDATIONS                                                           │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│    For Users:                                                                 │
+│    • ALWAYS change default WiFi passwords                                    │
+│    • Use strong, random passwords (12+ characters)                           │
+│    • Consider WPA3 if supported                                              │
+│                                                                               │
+│    For Manufacturers:                                                         │
+│    • Use cryptographically secure random password generation                 │
+│    • Do not derive passwords from MAC addresses                              │
+│    • Force password change on first setup                                    │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                         LAB COMPLETED SUCCESSFULLY!                            ║
+║                                                                               ║
+║    This lab demonstrates the importance of:                                   ║
+║    • Changing default passwords                                               ║
+║    • Understanding WiFi security vulnerabilities                              ║
+║    • Responsible security research                                            ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
