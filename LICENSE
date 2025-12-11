@@ -1,0 +1,75 @@
+MIT License
+
+Copyright (c) 2025 BinhTinh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+================================================================================
+                              SECURITY DISCLAIMER
+================================================================================
+
+This software is provided for EDUCATIONAL and RESEARCH purposes only. 
+
+By using this software, you agree to the following terms: 
+
+1. AUTHORIZED USE ONLY
+   This tool should only be used on networks and systems that you own or have
+   explicit written permission to test.  Unauthorized access to computer systems
+   is illegal in most jurisdictions. 
+
+2. NO MALICIOUS USE
+   This software must not be used for any malicious purposes, including but not
+   limited to:  unauthorized network access, data theft, denial of service, or
+   any activity that violates applicable laws. 
+
+3. LEGAL COMPLIANCE
+   Users are solely responsible for ensuring their use of this software complies
+   with all applicable local, state, national, and international laws and
+   regulations.
+
+4. NO WARRANTY
+   The authors provide no warranty and accept no responsibility for any damages
+   or legal consequences resulting from the use or misuse of this software.
+
+5. EDUCATIONAL INTENT
+   This project is intended to demonstrate vulnerabilities in default password
+   generation algorithms (CVE-2012-4366) for educational purposes, security
+   research, and to promote better security practices.
+
+================================================================================
+                              RESPONSIBLE DISCLOSURE
+================================================================================
+
+If you discover any security vulnerabilities using this tool, please follow
+responsible disclosure practices:
+
+- Report vulnerabilities to the affected vendor first
+- Allow reasonable time for the vendor to address the issue
+- Do not exploit vulnerabilities for personal gain
+- Consider the impact on end users when disclosing
+
+================================================================================
+                                   REFERENCES
+================================================================================
+
+- CVE-2012-4366: https://nvd.nist.gov/vuln/detail/CVE-2012-4366
+- PSKracker: https://github.com/soxrok2212/PSKracker
+- Aircrack-ng: https://www.aircrack-ng.org/
+
+================================================================================
