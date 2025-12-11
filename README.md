@@ -1,8 +1,9 @@
 # 🔐 PSKracker Audit Lab
 
-![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-orange? logo=ubuntu)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Status](https://img.shields.io/badge/status-Active-success)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-orange?logo=ubuntu)
+![Shell](https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![CVE](https://img.shields.io/badge/CVE-2012--4366-red)
 
 ## 📋 Giới thiệu
 
