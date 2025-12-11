@@ -1,6 +1,6 @@
 # 🔐 PSKracker Audit Lab
 
-![Ubuntu](https://img.shields.io/badge/Ubuntu-24. 04-orange? logo=ubuntu)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-orange? logo=ubuntu)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/status-Active-success)
 
@@ -67,7 +67,7 @@ sudo ./lab.sh phase5    # Tạo báo cáo
 sudo ./lab.sh full
 
 # Cleanup
-sudo ./lab. sh cleanup
+sudo ./lab.sh cleanup
 ```
 
 ## 📁 Cấu trúc thư mục
